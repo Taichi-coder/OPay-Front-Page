@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project OPAY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background-image: linear-gradient(rgba(11, 126, 11, 0.774),white);
+            min-height: 100vh;
+        }
+
+        body {
+            display: flex;
+            flex-flow: column nowrap;
+            max-width: 800px;
+            margin: auto;
+            min-height: 100vh;
+            background-color: rgb(245, 245, 245);
+        }
+
+        .homePage {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        header {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            padding: 10px;
+            background-color: rgb(245, 245, 245);
+        }
+
+        .header-span {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        header i {
+            font-size: 1.6rem;
+            margin-left: 19px;
+        }
+
+        .header-span p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 7px;
+        }
+
+        .homePage-green {
+            background-color: rgba(7, 192, 38, 0.842);
+            max-width: 750px;
+            height: 120px;
+            border-radius: 15px;
+            margin-top: 7px;
+        }
+
+        .homePage-green span {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            padding-top: 17px;
+            margin-inline: 15px;
+        }
+
+        .homePage-green p {
+            color: whitesmoke;
+            font-weight: 400;
+        }
+
+        .homePage-green .bb {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            margin-top: 1px;
+        }
+
+        .homePage-green .th {
+            font-size: 12px;
+            padding-left: 8px;
+            font-weight: 700;
+        }
+
+        .bb .bgg{
+            background-color: white;
+            width: 120px;
+            height: 30px;
+            border-radius: 15px;
+            margin-right: 15px;
+        }
+
+        .bgg p {
+            color: rgb(63, 212, 88);
+            padding-left: 9px;
+            padding-top: 1px;
+            font-weight: 400;
+        }
+
+        .white {
+            background-color: white;
+            max-width: 750px;
+            height: 105px;
+            border-radius: 20px;
+            margin: 13px auto;
+        }
+
+        .row-wrap {
+            display:flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            padding-top: 1rem;
+        }
+
+        .tet {
+            color: rgba(7, 192, 38, 0.842);
+            font-size: 1.6rem;
+        }
+
+        .row-wrap a {
+            background-color: rgba(124, 209, 124, 0.384);;
+            width: 50px;
+            height: 49px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cv {
+            background-color: rgba(7, 192, 38, 0.842);
+            width: 1.8rem;
+            border-radius: 7px;
+        }
+
+        .cv i {
+            color: white;
+            font-size: 15px;
+            margin-inline: 6px;
+        }
+        
+        .row-wrap2 {
+            display:flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            padding-top: 1rem;
+        }
+
+        .row-wrap2 a {
+            background-color: rgba(124, 209, 124, 0.384);
+            width: 50px;
+            height: 49px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row-wrp {
+            display:flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            margin-top: 5px;
+        }
+
+        .row-wrp p {
+            font-size: 14px;
+        }
+
+        .row-wrp2 {
+            display:flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            margin-top: 5px;
+            margin-right: 11px;
+            margin-left: -5px;
+        }
+
+        .row-wrp2 p {
+            font-size: 14px;
+        }
+
+        .whites {
+            background-color: white;
+            max-width: 750px;
+            height: 200px;
+            border-radius: 20px;
+            margin-bottom: 13px;
+        }
+
+        .row-wrap3 {
+            display:flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            padding-top: 2px;
+        }
+
+        .row-wrap3 a {
+            background-color: rgba(124, 209, 124, 0.384);
+            width: 50px;
+            height: 49px;
+            border-radius: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row-wrp3 {
+            display:flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            margin-top: 5px;
+            margin-right: 9px;
+        }
+
+        .row-wrp3 p {
+            font-size: 14px;
+        }
+
+        .whites3 {
+            background-color: white;
+            max-width: 750px;
+            height: 90px;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+        }
+
+        .row-wrap4 {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .row-wrap4 a {
+            background-color: rgba(124, 209, 124, 0.384);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(7, 192, 38, 0.842);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1.5rem 1.8rem;
+        }
+
+        .row-wrap4 .tet {
+            font-size: 1.3rem;
+        }
+
+        .row-wrap4-4 {
+            margin: 10px 0;
+        }
+
+        .row-wrap4-4 p {
+            padding: 0;
+            margin: -5px 0;
+            font-size: 15px;
+            color: rgb(44, 42, 42);
+            font-weight: 500;
+        }
+
+        .row-wrap4-4 h6 {
+            padding: 0;
+            margin: 7px 0;
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+
+        .footer1 {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            width: 800px;
+            position: fixed;
+            bottom: 0;
+            background-color: white;
+        }
+
+        .tets {
+            color: rgba(128, 128, 128, 0.788);
+            font-size: 1.5rem;
+        }
+
+        .gray {
+            color: rgba(128, 128, 128, 0.788);
+        }
+
+        .gr {
+            color: rgba(7, 192, 38, 0.842);
+        }
+
+        .footer1 p {
+            margin: -4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .footer2 {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background-color: white;
+        }
+
+        .footer2 p {
+            margin: -4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="homePage container-lg">
+        <header>
+            <span class="header-span">
+                <i class="bi bi-person-circle fs-1 pe-1"></i>
+                <p>Hi,CHIBUIKE</p>
+            </span>
+            <div>
+                <i class="bi bi-headset"></i>
+                <i class="bi bi-qr-code-scan"></i>
+                <i class="bi bi-bell"></i>
+            </div>
+        </header>
+
+        
+        <!-- ICON -->
+        
+
+        <div class="homePage-green container-md">
+            <span>
+                <p><i class="bi bi-shield-fill-check"></i>Available Balance<i class="bi bi-eye-fill ps-2"></i></p>
+                <p>Transact...n History <i class="bi bi-chevron-right th"></i></p>
+            </span>
+           
+            <div class="bb">
+                <p class="display-6 fw-bold ps-3"><i class="bi bi-currency-pound small"></i>2,000.00</p>
+                <div class="bgg">
+                    <p>+ Add Money</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="white">
+            <div class="row-wrap">
+                <a href="">
+                    <i class="bi bi-person-fill-add tet"></i>
+                </a>
+
+                <a href="">
+                    <i class="bi bi-bank2 tet"></i>
+                </a>
+            
+                <a href="">
+                    <div class="cv">
+                        <i class="bi bi-arrows-angle-contract tet"></i>
+                    </div>
+                    
+                </a>
+            </div>
+            <div class="row-wrp">
+                <p class="ms-1">To Opay</p>
+                <p class="ms-2">To Bank</p>
+                <p class="d">Withdraw</p>
+            </div>
+        </div>
+
+        <div class="whites">
+            <div class="row-wrap2">
+                <a href="">
+                    <i class="bi bi-phone-fill tet"></i>
+                </a>
+                <a href="">
+                    <i class="bi bi-phone-flip tet"></i>
+                </a>
+                <a href="">
+                    <i class="bi bi-cookie tet"></i>
+                </a>
+                <a href="">
+                    <i class="bi bi-tv-fill tet"></i>
+                </a>   
+            </div>
+            <div class="row-wrp2">
+                <p class="">Airtime</p>
+                <p class="">Data</p>
+                <p class="">Betting</p>
+                <p class="">TV</p>
+            </div>
+
+            <div class="row-wrap3">
+                <a href="">
+                    <i class="bi bi-piggy-bank-fill tet"></i>
+                </a>
+                <a href="">
+                    <i class="bi bi-coin tet"></i>
+                </a>
+                <a href="">
+                    <i class="bi bi-balloon-heart-fill tet"></i>
+                </a>
+                <a href="">
+                    <i class="bi bi-unity tet"></i>
+                </a>
+            </div>
+            <div class="row-wrp3">
+                <p class="">OWealth</p>
+                <p class="ps-3">Loan</p>
+                <p class="">Play4aChild</p>
+                <p class="">More</p>
+            </div>
+        </div>
+
+        <div class="whites3">
+            <div class="row-wrap4">
+                <a href="">
+                    <i class="bi bi-megaphone-fill tet"></i>
+                </a>
+                
+                <div class="row-wrap4-4">
+                    <h6 class="fw-bold">Cash up for grabs!</h6>
+                <p>Invite friends and earn up to</p>
+                <p><i class="bi bi-currency-pound small"></i>4,200 Cash</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+        <i class="bi bi-ui-checks-grid"></i>
+        <i class="bi bi-dot"></i>
+        <i class="bi bi-box2-heart-fill"></i>
+        <i class="bi bi-wrench-adjustable-circle-fill"></i>
+        
+        <i class="bi bi-database-fill-check"></i> -->
+       
+    </section>
+
+    <footer>
+        <div class="footer1 d-none d-md-flex">
+            <a href="">
+                <i class="bi bi-vinyl-fill tets gr ps-1"></i>
+                <p class="gr">Home</p>
+            </a>
+            <a href="">
+                <i class="bi bi-gem tets ps-2"></i> 
+                <p class="gray">Rewards</p>
+            </a>
+            <a href="">
+                <i class="bi bi-graph-up tets ps-2"></i>
+                <p class="gray">Finance</p>
+            </a>
+            <a href="">
+                <i class="bi bi-credit-card tets"></i>
+                <p class="gray">Cards</p>
+            </a>
+            <a href="">
+                <i class="bi bi-person-fill-check tets"></i>
+                <p class="gray ps-2">Me</p>
+            </a>
+        </div>
+
+        <div class="footer2 d-md-none">
+            <a href="">
+                <i class="bi bi-vinyl-fill tets gr ps-1"></i>
+                <p class="gr">Home</p>
+            </a>
+            <a href="">
+                <i class="bi bi-gem tets ps-2"></i> 
+                <p class="gray">Rewards</p>
+            </a>
+            <a href="">
+                <i class="bi bi-graph-up tets ps-2"></i>
+                <p class="gray">Finance</p>
+            </a>
+            <a href="">
+                <i class="bi bi-credit-card tets"></i>
+                <p class="gray">Cards</p>
+            </a>
+            <a href="">
+                <i class="bi bi-person-fill-check tets"></i>
+                <p class="gray ps-2">Me</p>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
